@@ -5,5 +5,6 @@ from . import views
 urlpatterns = [
 
     path('hr_dashboard/', views.hr_dashboard, name='hr-dashboard'),
-    path('black_page/', views.black_page, name='black-page'),
+    path('employee/', views.employee, name='employee'),
+    path('employee_add/', views.employee_add, name='employee-add')
 ]

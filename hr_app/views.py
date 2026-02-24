@@ -4,5 +4,8 @@ from django.shortcuts import render
 def hr_dashboard(request):
     return render(request, 'hr_app/hr_dashboard.html')
 
-def black_page(request):
-    return render(request, 'hr_app/black_page.html')
+def employee(request):
+    return render(request, 'hr_app/Employee.html')
+
+def employee_add(request):
+    return render(request, 'hr_app/Employee_Add.html')
