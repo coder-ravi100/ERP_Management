@@ -19,8 +19,8 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('',          include('users.urls')),              # Login / Logout / Dashboard redirect
+    path('user/', include('user_app.urls')),          # Login / Logout / Dashboard redirect
     path('hr/', include('hr_app.urls')),              # HR Dashboard URLs
     path('manager/', include('manager_app.urls')),    # Manager Dashboard URLs
-    path('employee/', include('employee_app.urls'))  # Employee Dashboard URLs
+    path('employee/', include('employee_app.urls'))   # Employee Dashboard URLs
 ]

@@ -40,7 +40,8 @@ INSTALLED_APPS = [
 
     'employee_app',
     'manager_app',
-    'hr_app',   
+    'hr_app',
+    'user_app',   
 
     
 ]
