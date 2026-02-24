@@ -2,4 +2,6 @@ from django.contrib import admin
 from django.urls import path
 from . import views 
 
-urlpatterns = []
+urlpatterns = [
+    path('dashboard/', views.manager_dashboard, name='manager-dashboard'),
+]
