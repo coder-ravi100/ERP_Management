@@ -1,0 +1,98 @@
+{% extends 'hr_app/dashboard.html' %}
+{% load static %}
+{% block maincontaint %}
+<div class="container-fluid mt-4">
+
+    <!-- Page Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h4 class="fw-bold mb-0">Add Designation</h4>
+            <small class="text-muted">Create a new role under a department</small>
+        </div>
+        <a href="#" class="btn btn-outline-secondary">
+            <i class="mdi mdi-arrow-left"></i> Back
+        </a>
+    </div>
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+
+            <form>
+
+                <!-- Basic Information -->
+                <h6 class="text-primary mb-3">Basic Information</h6>
+                <div class="row g-3 mb-4">
+
+                    <div class="col-md-6">
+                        <label class="form-label">Designation Name <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" placeholder="Enter designation name">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Designation Code <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" placeholder="Example: DEV01, HR02">
+                    </div>
+
+                </div>
+
+                <!-- Department & Reporting -->
+                <h6 class="text-primary mb-3">Department Details</h6>
+                <div class="row g-3 mb-4">
+
+                    <div class="col-md-6">
+                        <label class="form-label">Department <span class="text-danger">*</span></label>
+                        <select class="form-select">
+                            <option selected disabled>Select Department</option>
+                            <option>IT</option>
+                            <option>HR</option>
+                            <option>Finance</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Reporting To</label>
+                        <select class="form-select">
+                            <option selected disabled>Select Reporting Head</option>
+                            <option>Manager</option>
+                            <option>Team Lead</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- Status & Description -->
+                <h6 class="text-primary mb-3">Additional Information</h6>
+                <div class="row g-3 mb-4">
+
+                    <div class="col-md-6">
+                        <label class="form-label">Status</label>
+                        <select class="form-select">
+                            <option selected>Active</option>
+                            <option>Inactive</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-control" rows="3" style="resize:none;"></textarea>
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex justify-content-end gap-2">
+                    <button type="reset" class="btn btn-light">
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="mdi mdi-content-save"></i> Save Designation
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

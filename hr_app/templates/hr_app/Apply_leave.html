@@ -1,0 +1,86 @@
+{% extends 'hr_app/dashboard.html' %}
+{% load static %}
+{% block maincontaint %}
+<div class="container-fluid mt-4">
+
+    <!-- Page Header -->
+    <div class="mb-4">
+        <h4 class="fw-bold mb-0">Apply Leave</h4>
+        <small class="text-muted">Submit your leave request for approval</small>
+    </div>
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+
+            <form>
+
+                <!-- Leave Information -->
+                <h6 class="text-primary mb-3">Leave Details</h6>
+                <div class="row g-3 mb-4">
+
+                    <div class="col-md-6">
+                        <label class="form-label">Leave Type <span class="text-danger">*</span></label>
+                        <select class="form-select">
+                            <option selected disabled>Select Leave Type</option>
+                            <option>Casual Leave</option>
+                            <option>Sick Leave</option>
+                            <option>Paid Leave</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">From Date <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">To Date <span class="text-danger">*</span></label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Total Days</label>
+                        <input type="number" class="form-control" placeholder="Auto" readonly>
+                    </div>
+
+                </div>
+
+                <!-- Reason -->
+                <h6 class="text-primary mb-3">Reason</h6>
+                <div class="mb-4">
+                    <textarea class="form-control" rows="3" style="resize:none;" placeholder="Write your reason here..."></textarea>
+                </div>
+
+                <!-- Additional Information -->
+                <h6 class="text-primary mb-3">Additional Information</h6>
+                <div class="row g-3 mb-4">
+
+                    <div class="col-md-6">
+                        <label class="form-label">Contact During Leave</label>
+                        <input type="text" class="form-control" placeholder="Phone or Email">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Attachment (Optional)</label>
+                        <input type="file" class="form-control">
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex justify-content-end gap-2">
+                    <button type="reset" class="btn btn-light">
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="mdi mdi-send"></i> Submit Request
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

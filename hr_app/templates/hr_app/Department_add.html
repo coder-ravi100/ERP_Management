@@ -1,0 +1,57 @@
+{% extends 'hr_app/dashboard.html' %}
+{% load static %}
+{% block maincontaint %}
+<div class="container-fluid mt-4">
+    <div class="card shadow border-0">
+      <div class="card-body p-4">
+  
+        <h4 class="fw-bold mb-4">Department Details</h4>
+  
+        <form>
+  
+          <h6 class="text-primary mb-3">Basic Information</h6>
+          <div class="row g-3 mb-4">
+            <div class="col-md-6">
+              <label class="form-label">Department Name</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Department Code</label>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+  
+          <h6 class="text-primary mb-3">Management</h6>
+          <div class="row g-3 mb-4">
+            <div class="col-md-6">
+              <label class="form-label">Department Head</label>
+              <select class="form-select">
+                <option>Select Head</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Status</label>
+              <select class="form-select">
+                <option>Active</option>
+                <option>Inactive</option>
+              </select>
+            </div>
+          </div>
+  
+          <h6 class="text-primary mb-3">Additional Info</h6>
+          <div class="mb-4">
+            <label class="form-label">Description</label>
+            <textarea class="form-control" rows="3"  style="resize: none;"></textarea>
+          </div>
+  
+          <div class="text-end">
+            <button class="btn btn-light">Cancel</button>
+            <button class="btn btn-primary">Save Department</button>
+          </div>
+  
+        </form>
+  
+      </div>
+    </div>
+  </div>
+{% endblock %}
