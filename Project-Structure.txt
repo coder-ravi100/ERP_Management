@@ -1,0 +1,52 @@
+#STEP 1: ROLE & ACCESS
+---------------------------------------
+ROLE            ACCESS & RESPONSIBILITY
+-----------------------------------------------------------------------
+1. ADMIN/USER   Login handle karega, authentication, authorization. 
+                Sirf User app me active. 
+                CRUD access HR/Manager/Employee app me assign karega.       
+----------------------------------------------------------------------   
+2. HR           Employees manage karega, 
+                Attendance, 
+                Leave, Payroll, 
+                Reports generate karega, 
+                new hiring info, job posting, 
+                employee verification.           
+----------------------------------------------------------------------
+3. MANAGER      Team manage karega, 
+                Attendance approve/reject, 
+                Leave approve/reject, 
+                Reports dekhega, 
+                Payroll verify karega.
+---------------------------------------------------------------------
+4. EMPLOYEE     Apna profile dekhega, 
+                Attendance mark karega, 
+                Leave request karega, 
+                Payslip dekhega.
+---------------------------------------------------------------------
+
+
+
+#STEP 2: APPS STRUCTURE
+-------------------------------------------------------------------------------------------------------------------------------------------
+APPS         PURSPOSE                    PAGES/VIEWS                             KEY FIELD
+-----        --------                    -----------                             ---------
+USER         Login/Auth/Role assign      Login,Logout,Password,Reset Profile     Username,email,password,role,is_active
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+HR          HR Management               Employee list,Add,Edit                  Employee: name, department, designation, join_date,
+                                        Employee leave Management               salary, type; Attendance: date, status, employee; Leave:
+                                        Payroll , Reports                       start_date, end_date, type, status; Payroll: month, salary,
+                                        deductions, net_pay
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+MANAGER     Manager/Dashboard           Team OverView,                          Employee Details,Attendance Pending,
+                                        Attendance                              Leave Pending                        
+                                        Approval, Leave
+                                        Approval,Reports
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+EMPLOYEE    Employee Self               Profile Attendance,                      Attendance Status,Leave History , Payslip PDF/CSV
+            Services                    Leave Request,
+                                        Payslip
+--------------------------------------------------------------------------------------------------------------------------------------------
