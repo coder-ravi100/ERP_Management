@@ -1,28 +1,28 @@
 #STEP 1: ROLE & ACCESS
 ---------------------------------------
-ROLE            ACCESS & RESPONSIBILITY
+ROLE                ACCESS & RESPONSIBILITY
 -----------------------------------------------------------------------
-1. ADMIN/USER   Login handle karega, authentication, authorization. 
-                Sirf User app me active. 
-                CRUD access HR/Manager/Employee app me assign karega.       
+1. ADMINI/USER      Login handle karega, authentication, authorization. 
+   Already Maked    Sirf User app me active. 
+                    CRUD access HR/Manager/Employee app me assign karega.       
 ----------------------------------------------------------------------   
-2. HR           Employees manage karega, 
-                Attendance, 
-                Leave, Payroll, 
-                Reports generate karega, 
-                new hiring info, job posting, 
-                employee verification.           
+2. HR               Employees manage karega, 
+                    Attendance, 
+                    Leave, Payroll, 
+                    Reports generate karega, 
+                    new hiring info, job posting, 
+                    employee verification.           
 ----------------------------------------------------------------------
-3. MANAGER      Team manage karega, 
-                Attendance approve/reject, 
-                Leave approve/reject, 
-                Reports dekhega, 
-                Payroll verify karega.
+3. MANAGER          Team manage karega, 
+                    Attendance approve/reject, 
+                    Leave approve/reject, 
+                    Reports dekhega, 
+                    Payroll verify karega.
 ---------------------------------------------------------------------
-4. EMPLOYEE     Apna profile dekhega, 
-                Attendance mark karega, 
-                Leave request karega, 
-                Payslip dekhega.
+4. EMPLOYEE         Apna profile dekhega, 
+                    Attendance mark karega, 
+                    Leave request karega, 
+                    Payslip dekhega.
 ---------------------------------------------------------------------
 
 
