@@ -1,0 +1,107 @@
+{% extends 'hr_app/Dashboard.html' %}
+{% load static %}
+{% block meincontaint %}
+
+<main class="app-main">
+
+  <!-- Header -->
+  <div class="app-content-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <h3 class="mb-0">Add New Department</h3>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-end">
+            <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+            <li class="breadcrumb-item active">Add Department</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="app-content">
+    <div class="container-fluid">
+      <div class="row g-4">
+        <div class="col-md-12">
+
+          <div class="card card-primary card-outline mb-4">
+            <div class="card-header">
+              <div class="card-title">Department Information</div>
+            </div>
+
+            <form class="needs-validation" novalidate>
+              <div class="card-body">
+
+                <div class="row g-3">
+
+                  <!-- Department Name -->
+                  <div class="col-md-6">
+                    <label class="form-label">Department Name</label>
+                    <input type="text" class="form-control" required>
+                    <div class="invalid-feedback">Department name is required.</div>
+                  </div>
+
+                  <!-- Department Code -->
+                  <div class="col-md-6">
+                    <label class="form-label">Department Code</label>
+                    <input type="text" class="form-control" required>
+                    <div class="invalid-feedback">Department code is required.</div>
+                  </div>
+
+                  <!-- Department Head -->
+                  <div class="col-md-6">
+                    <label class="form-label">Department Head</label>
+                    <select class="form-select" required>
+                      <option selected disabled value="">Choose Manager...</option>
+                      <option>John Doe</option>
+                      <option>Rahul Sharma</option>
+                      <option>Priya Patel</option>
+                    </select>
+                    <div class="invalid-feedback">Please select department head.</div>
+                  </div>
+
+                  <!-- Department Email -->
+                  <div class="col-md-6">
+                    <label class="form-label">Department Email</label>
+                    <input type="email" class="form-control">
+                  </div>
+
+            
+                  <!-- Status -->
+                  <div class="col-md-6">
+                    <label class="form-label">Status</label>
+                    <select class="form-select" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>Active</option>
+                      <option>Inactive</option>
+                    </select>
+                    <div class="invalid-feedback">Select status.</div>
+                  </div>
+
+                  <!-- Description -->
+                  <div class="col-md-12">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="card-footer text-end">
+                <button class="btn btn-secondary" type="reset">Cancel</button>
+                <button class="btn btn-primary" type="submit">Save Department</button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

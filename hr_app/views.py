@@ -5,31 +5,25 @@ def hr_dashboard(request):
     return render(request, 'hr_app/Dashboard.html')
 
 def employee(request):
-    return render(request, 'hr_app/Employee.html')
+    return render(request, 'hr_app/All_Employees.html')
 
 def employee_add(request):
-    return render(request, 'hr_app/Employee_Add.html')
+    return render(request, 'hr_app/Add_Employee.html')
 
-def department(request):
-    return render(request, 'hr_app/Department.html')
+def update_employee(request):
+    return render(request, 'hr_app/Update_Employee.html')
 
 def department_add(request):
-    return render(request, 'hr_app/Department_Add.html')
+    return render(request, 'hr_app/Add_Department.html')
 
-def designation(request):
-    return render(request, 'hr_app/Designation.html')
+def department(request):
+    return render(request, 'hr_app/All_Department.html')
 
-def designation_add(request):
-    return render(request, 'hr_app/Designation_Add.html')
+def list_attendance(request):
+    return render(request, 'hr_app/Attendance.html')
 
-def leave_management(request):
-    return render(request, 'hr_app/Leave_management.html')
+def attendance_mark(request):
+    return render(request, 'hr_app/Attendance_Mark.html')
 
-def apply_leave(request):
-    return render(request, 'hr_app/Apply_leave.html')
-
-def Leave_request(request):
-    return render(request, 'hr_app/Leave_request.html')
-
-def leave_balance(request):
-    return render(request, 'hr_app/Leave_balance.html')
+def leave(request):
+    return render(request, 'hr_app/Leave.html')

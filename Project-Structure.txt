@@ -50,3 +50,64 @@ EMPLOYEE    Employee Self               Profile Attendance,                     
             Services                    Leave Request,
                                         Payslip
 --------------------------------------------------------------------------------------------------------------------------------------------
+
+#STEP 3: EXAMPLE ROLES ACCESS
+--------------------------------------------------------------------------------------------------------------------------------------------
+👨‍💼 Manager Role (Team Leader)
+Manager team handle karta hai, company nahi.
+
+🎯Manager kya karega?
+
+✔ Apni team ki attendance dekhega
+✔ Apni team ki leave approve karega
+✔ Performance review karega
+✔ Target assign karega
+
+🎯Manager kya nahi karega?
+
+❌ Employee add nahi karega
+❌ Salary decide nahi karega
+❌ Company policy change nahi karega
+❌ Dusre department ka data nahi dekhega
+
+🎯 Simple Example
+
+IT Department me 10 log hain.
+
+IT Manager:
+
+Sirf un 10 logon ko manage karega.
+
+HR ke paas pura company ka access hota hai.
+
+--------------------------------------------
+👩‍💻 HR Ka Role (Human Resource Department)
+
+HR company level ka banda hota hai.
+
+HR kya karega?
+
+✔ Naya employee add karega
+✔ Offer letter generate karega
+✔ Salary manage karega
+✔ Promotion process karega
+✔ Leave policy banayega
+✔ Payroll handle karega
+✔ Termination karega
+
+HR kya nahi karega?
+
+❌ Daily task assign nahi karega
+❌ Technical supervision nahi karega
+
+---------------------------------------
+🧠 Real Life Simple Analogy
+
+School examplE :
+
+Teacher = Manager
+Principal Office = HR
+
+Teacher: Apni class manage karta hai
+
+Principal: Puri school manage karta hai

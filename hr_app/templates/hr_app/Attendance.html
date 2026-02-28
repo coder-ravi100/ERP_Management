@@ -1,0 +1,193 @@
+{% extends 'hr_app/Dashboard.html' %}
+{% load static %}
+{% block meincontaint %}
+<main class="app-main">
+    <!--begin::App Content Header-->
+    <div class="app-content-header">
+      <!--begin::Container-->
+      <div class="container-fluid">
+        <!--begin::Row-->
+        <div class="row">
+          <div class="col-sm-6"><h3 class="mb-0">Attendance Tables</h3></div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-end">
+              <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">All Employees Attendance</li>
+            </ol>
+          </div>
+        </div>
+        <!--end::Row-->
+      </div>
+      <!--end::Container-->
+    </div>
+    <!--end::App Content Header-->
+    <!--begin::App Content-->
+    <div class="app-content">
+      <!--begin::Container-->
+      <div class="container-fluid">
+        <!--begin::Row-->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card mb-4">
+              <div class="card-header"><h3 class="card-title">Attendance</h3></div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive">
+                <table class="table table-bordered table-responsive">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Employee</th>
+                      <th>Date</th>
+                      <th class="text-center">Check-In</th>
+                      <th class="text-center">Check-Out</th>
+                      <th class="text-center">Hours</th>
+                      <th>Status</th>
+                      <th width="130">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="align-middle">
+                      <td>1.</td>
+                      <td>
+                        <strong>Meera Aggrawal</strong><br>
+                        <small class="text-muted"><span class=" badge text-bg-primary">EMP001  |  IT</span></small>
+                      </td>
+                      <td>28-02-2026</td>
+                      <td class="text-center">09:15 AM</td>
+                      <td class="text-center">06:05 PM</td>
+                      <td class="text-center">8H 50M</td>
+                      <td><span class="badge text-bg-success">Present</span></td>
+                      <td>
+                        <div class="btn-group" role="group">
+                          
+                          <button class="btn btn-sm btn-info">
+                            <i class="bi bi-eye"></i>
+                          </button>
+                      
+                          <button class="btn btn-sm btn-warning">
+                            <i class="bi bi-pencil"></i>
+                          </button>
+                      
+                          <button class="btn btn-sm btn-danger">
+                            <i class="bi bi-trash"></i>
+                          </button>
+                      
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr class="align-middle">
+                        <td>2.</td>
+                        <td>
+                          <strong>akash Parmar</strong><br>
+                          <small class="text-muted"><span class=" badge text-bg-primary">EMP001  |  IT</span></small>
+                        </td>
+                        <td>28-02-2026</td>
+                        <td class="text-center">09:15 AM</td>
+                        <td class="text-center">06:05 PM</td>
+                        <td class="text-center">8H 50M</td>
+                        <td><span class="badge text-bg-danger">Absent</span></td>
+                        <td>
+                          <div class="btn-group" role="group">
+                            
+                            <button class="btn btn-sm btn-info">
+                              <i class="bi bi-eye"></i>
+                            </button>
+                        
+                            <button class="btn btn-sm btn-warning">
+                              <i class="bi bi-pencil"></i>
+                            </button>
+                        
+                            <button class="btn btn-sm btn-danger">
+                              <i class="bi bi-trash"></i>
+                            </button>
+                        
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr class="align-middle">
+                        <td>3.</td>
+                        <td>
+                          <strong>Ravi Aarya</strong><br>
+                          <small class="text-muted"><span class=" badge text-bg-primary">EMP001  |  IT</span></small>
+                        </td>
+                        <td>28-02-2026</td>
+                        <td class="text-center">09:15 AM</td>
+                        <td class="text-center">06:05 PM</td>
+                        <td class="text-center">8H 50M</td>
+                        <td><span class="badge text-bg-warning">Late</span></td>
+                        <td>
+                          <div class="btn-group" role="group">
+                            
+                            <button class="btn btn-sm btn-info">
+                              <i class="bi bi-eye"></i>
+                            </button>
+                        
+                            <button class="btn btn-sm btn-warning">
+                              <i class="bi bi-pencil"></i>
+                            </button>
+                        
+                            <button class="btn btn-sm btn-danger">
+                              <i class="bi bi-trash"></i>
+                            </button>
+                        
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr class="align-middle">
+                        <td>4.</td>
+                        <td>
+                          <strong>Priya Majumdar</strong><br>
+                          <small class="text-muted"><span class=" badge text-bg-primary">EMP001  |  IT</span></small>
+                        </td>
+                        <td>28-02-2026</td>
+                        <td class="text-center">09:15 AM</td>
+                        <td class="text-center">06:05 PM</td>
+                        <td class="text-center">8H 50M</td>
+                        <td><span class="badge text-bg-primary">Leave</span></td>
+                        <td>
+                          <div class="btn-group" role="group">
+                            
+                            <button class="btn btn-sm btn-info">
+                              <i class="bi bi-eye"></i>
+                            </button>
+                        
+                            <button class="btn btn-sm btn-warning">
+                              <i class="bi bi-pencil"></i>
+                            </button>
+                        
+                            <button class="btn btn-sm btn-danger">
+                              <i class="bi bi-trash"></i>
+                            </button>
+                        
+                          </div>
+                        </td>
+                      </tr>
+                   
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <ul class="pagination pagination-sm m-0 float-end">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div>
+            </div>
+           
+          </div>
+         
+        </div>
+        <!--end::Row-->
+      </div>
+      <!--end::Container-->
+    </div>
+    <!--end::App Content-->
+  </main>
+{% endblock %}

@@ -1,0 +1,147 @@
+{% extends 'hr_app/Dashboard.html' %}
+{% load static %}
+{% block meincontaint %}
+
+<main class="app-main">
+
+  <!-- Header -->
+  <div class="app-content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h3 class="mb-0">Leave Management</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-content">
+    <div class="container-fluid">
+
+      <!-- Filter Card -->
+      <div class="card card-outline card-primary mb-3">
+        <div class="card-body">
+          <form method="GET">
+            <div class="row g-3 align-items-end">
+
+              <div class="col-md-3">
+                <label class="form-label">From Date</label>
+                <input type="date" name="from_date" class="form-control">
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label">To Date</label>
+                <input type="date" name="to_date" class="form-control">
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label">Department</label>
+                <select name="department" class="form-select">
+                  <option value="">All Departments</option>
+                  <option>HR</option>
+                  <option>IT</option>
+                  <option>Sales</option>
+                </select>
+              </div>
+
+              <div class="col-md-2">
+                <label class="form-label">Status</label>
+                <select name="status" class="form-select">
+                  <option value="">All</option>
+                  <option value="Pending">Pending</option>
+                  <option value="Approved">Approved</option>
+                  <option value="Rejected">Rejected</option>
+                </select>
+              </div>
+
+              <div class="col-md-1">
+                <button type="submit" class="btn btn-primary w-100">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mb-4">
+            <div class="card-header"><h3 class="card-title">Bordered Table</h3></div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive">
+              <table class="table table-bordered table-responsive">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Employee</th>
+                        <th>Leave Type</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Days</th>
+                        <th>Applied On</th>
+                        <th>Status</th>
+                        <th width="150">Action</th>
+                      </tr>
+                </thead>
+                <tbody>
+                    <tr class="align-middle">
+                        <td>1</td>
+      
+                        <td>
+                          <strong>Rahul Sharma</strong><br>
+                          <small class="text-muted"><span class="badge text-bg-primary">EMP001 | IT</span></small>
+                        </td>
+      
+                        
+                        <td>Casual Leave</td>
+                        <td>01-03-2025</td>
+                        <td>03-03-2025</td>
+                        <td>3</td>
+                        <td>25-02-2025</td>
+      
+                        <td>
+                          <span class="badge bg-warning">Pending</span>
+                        </td>
+      
+                        <td>
+                          <div class="btn-group btn-group-sm" role="group">
+                            <button type="button" class="btn btn-info">
+                              <i class="bi bi-eye"></i>
+                            </button>
+                            <button type="button" class="btn btn-success">
+                              <i class="bi bi-check-circle"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger">
+                              <i class="bi bi-x-circle"></i>
+                            </button>
+                          </div>
+                        </td>
+      
+                      </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer clearfix">
+              <ul class="pagination pagination-sm m-0 float-end">
+                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+         
+        </div>
+       
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,130 @@
+{% extends 'hr_app/Dashboard.html' %}
+{% load static %}
+{% block meincontaint %}
+
+<main class="app-main">
+    <div class="app-content-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class="mb-0">All Employee Attendance</h3>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                <li class="breadcrumb-item active">Attendance</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+  <!-- Content -->
+  <div class="app-content">
+    <div class="container-fluid">
+
+      <!-- Filter Section -->
+      <div class="card card-outline card-primary mb-3">
+        <div class="card-body row g-3 align-items-end">
+          <div class="col-md-3">
+            <label class="form-label">Date</label>
+            <input type="date" class="form-control" value="{{ today_date }}">
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Department</label>
+            <select class="form-select">
+              <option selected>All Departments</option>
+              <option>HR</option>
+              <option>IT</option>
+              <option>Sales</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Status</label>
+            <select class="form-select">
+              <option selected>All</option>
+              <option>Present</option>
+              <option>Absent</option>
+              <option>Half Day</option>
+              <option>Leave</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <button class="btn btn-primary w-100">Filter</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Attendance Table -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mb-4">
+            <div class="card-header"><h3 class="card-title">Attendance Activity</h3></div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive">
+              <table class="table table-bordered table-responsive">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Employee</th>
+                    <th>Check In</th>
+                    <th>Check Out</th>
+                    <th>Status</th>
+                    <th width="150">Remark</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="align-middle">
+                    <td>1.</td>
+                    <td>
+                        <strong>Rahul Sharma</strong><br>
+                        <small class="text-muted"><span class="badge text-bg-primary">EMP001 | IT</span></small>
+                    </td>
+                    <td> <input type="time" class="form-control" value="09:15"></td>
+                    <td><input type="time" class="form-control" value="18:00"></td>
+                    <td>
+                        <div>
+                            <label class="form-label">Status</label>
+                            <select class="form-select">
+                              <option selected disabled value="">Choose...</option>
+                              <option>Present</option>
+                              <option>Absent</option>
+                              <option>Half Day</option>
+                              <option>Leave</option>
+                            </select>
+                            <div class="invalid-feedback">Select status.</div>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" placeholder="Remarks">
+                      </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer text-end">
+                <button class="btn btn-success">Save All</button>
+              </div>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer clearfix">
+              <ul class="pagination pagination-sm m-0 float-end">
+                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+         
+        </div>
+       
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

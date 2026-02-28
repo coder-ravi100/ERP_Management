@@ -86,12 +86,69 @@
                 <i class="bi bi-list"></i>
               </a>
             </li>
-            <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item d-none d-md-block"><a href="#" class="nav-link">Contact</a></li>
           </ul>
           <!--end::Start Navbar Links-->
           <!--begin::End Navbar Links-->
           <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown">
+                <button
+                  class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+                  id="bd-theme"
+                  type="button"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  data-bs-display="static"
+                >
+                  <span class="theme-icon-active">
+                    <i class="my-1"></i>
+                  </span>
+                  <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end"
+                  aria-labelledby="bd-theme-text"
+                  style="--bs-dropdown-min-width: 8rem;"
+                >
+                  <li>
+                    <button
+                      type="button"
+                      class="dropdown-item d-flex align-items-center active"
+                      data-bs-theme-value="light"
+                      aria-pressed="false"
+                    >
+                      <i class="bi bi-sun-fill me-2"></i>
+                      Light
+                      <i class="bi bi-check-lg ms-auto d-none"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="dropdown-item d-flex align-items-center"
+                      data-bs-theme-value="dark"
+                      aria-pressed="false"
+                    >
+                      <i class="bi bi-moon-fill me-2"></i>
+                      Dark
+                      <i class="bi bi-check-lg ms-auto d-none"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="dropdown-item d-flex align-items-center"
+                      data-bs-theme-value="auto"
+                      aria-pressed="true"
+                    >
+                      <i class="bi bi-circle-fill-half-stroke me-2"></i>
+                      Auto
+                      <i class="bi bi-check-lg ms-auto d-none"></i>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
             <!--begin::Navbar Search-->
             <li class="nav-item">
               <a class="nav-link" data-widget="navbar-search" href="#" role="button">
@@ -307,7 +364,7 @@
               id="navigation"
             >
             <li class="nav-item mb-2">
-              <a href="#" class="nav-link py-2">
+              <a href="{% url 'hr-dashboard' %}" class="nav-link py-2">
                 <i class="nav-icon bi bi-speedometer"></i>
                 <p>Dashboard</p>
               </a>
@@ -323,15 +380,15 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="./widgets/small-box.html" class="nav-link">
+                    <a href="{% url 'employee' %}" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
                       <p>All Employees</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="./widgets/info-box.html" class="nav-link">
+                    <a href="{% url 'employee-add' %}" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
-                      <p>Add Employee</p>
+                      <p>Create Employee</p>
                     </a>
                   </li>
                   
@@ -342,7 +399,7 @@
                   <i class="nav-icon bi bi-clipboard-fill"></i>
                   <p>
                     Department
-                    <span class="nav-badge badge text-bg-secondary me-3">6</span>
+                    <span class="nav-badge badge text-bg-success me-3">6</span>
                     <i class="nav-arrow bi bi-chevron-right"></i>
                   </p>
                 </a>
@@ -356,7 +413,7 @@
                   <li class="nav-item">
                     <a href="./layout/fixed-sidebar.html" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
-                      <p>Department Create</p>
+                      <p>Create Department</p>
                     </a>
                   </li>
                 </ul>
@@ -435,14 +492,40 @@
                   </li>
                 </ul>
               </li>
-             
               <li class="nav-item">
-                <a href="./docs/color-mode.html" class="nav-link">
-                  <i class="nav-icon bi bi-star-half"></i>
-                  <p>Color Mode</p>
-                  
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-gear"></i>
+                  <p>
+                    Setting
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+              
+                <ul class="nav nav-treeview">
+              
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon bi bi-person"></i>
+                      <p>Profile</p>
+                    </a>
+                  </li>
+              
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon bi bi-file-earmark-text"></i>
+                      <p>Reports</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-header">System Exit</li>
+              <li class="nav-item mb-2">
+                <a href="" class="nav-link py-2">
+                  <i class="nav-icon bi bi-power"></i>
+                  <p><span class="badge text-bg-danger">Logout</span></p>
                 </a>
               </li>
+            </li>
             </ul>
             <!--end::Sidebar Menu-->
           </nav>
@@ -451,6 +534,7 @@
       </aside>
        <!--end::Sidebar-->
       <!--begin::App Main-->
+      {% block meincontaint %}
       <main class="app-main">
         <!--begin::App Content Header-->
         <div class="app-content-header">
@@ -461,7 +545,7 @@
               <div class="col-sm-6"><h3 class="mb-0">Dashboard</h3></div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                 
                   <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                 </ol>
               </div>
@@ -472,6 +556,7 @@
         </div>
         <!--end::App Content Header-->
         <!--begin::App Content-->
+        
         <div class="app-content">
           <!--begin::Container-->
           <div class="container-fluid">
@@ -725,6 +810,7 @@
         </div>
         <!--end::App Content-->
       </main>
+      {% endblock %}
       <!--end::App Main-->
       <!--begin::Footer-->
       <!--begin::Footer-->
@@ -882,6 +968,89 @@
 
   </script>
     <!--end::Script-->
+
+    <script>
+      // Color Mode Toggler
+(() => {
+  "use strict";
+
+  const storedTheme = localStorage.getItem("theme");
+
+  const getPreferredTheme = () => {
+    if (storedTheme) {
+      return storedTheme;
+    }
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+
+  const setTheme = function (theme) {
+    if (
+      theme === "auto" &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      document.documentElement.setAttribute("data-bs-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-bs-theme", theme);
+    }
+  };
+
+  setTheme(getPreferredTheme());
+
+  const showActiveTheme = (theme, focus = false) => {
+    const themeSwitcher = document.querySelector("#bd-theme");
+
+    if (!themeSwitcher) {
+      return;
+    }
+
+    const themeSwitcherText = document.querySelector("#bd-theme-text");
+    const activeThemeIcon = document.querySelector(".theme-icon-active i");
+    const btnToActive = document.querySelector(
+      `[data-bs-theme-value="${theme}"]`
+    );
+    const svgOfActiveBtn = btnToActive.querySelector("i").getAttribute("class");
+
+    for (const element of document.querySelectorAll("[data-bs-theme-value]")) {
+      element.classList.remove("active");
+      element.setAttribute("aria-pressed", "false");
+    }
+
+    btnToActive.classList.add("active");
+    btnToActive.setAttribute("aria-pressed", "true");
+    activeThemeIcon.setAttribute("class", svgOfActiveBtn);
+    const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`;
+    themeSwitcher.setAttribute("aria-label", themeSwitcherLabel);
+
+    if (focus) {
+      themeSwitcher.focus();
+    }
+  };
+
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", () => {
+      if (storedTheme !== "light" || storedTheme !== "dark") {
+        setTheme(getPreferredTheme());
+      }
+    });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    showActiveTheme(getPreferredTheme());
+
+    for (const toggle of document.querySelectorAll("[data-bs-theme-value]")) {
+      toggle.addEventListener("click", () => {
+        const theme = toggle.getAttribute("data-bs-theme-value");
+        localStorage.setItem("theme", theme);
+        setTheme(theme);
+        showActiveTheme(theme, true);
+      });
+    }
+  });
+})();
+    </script>
   </body>
   <!--end::Body-->
 </html>

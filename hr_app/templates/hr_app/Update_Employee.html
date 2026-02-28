@@ -1,0 +1,159 @@
+{% extends 'hr_app/Dashboard.html' %}
+{% load static %}
+{% block meincontaint %}
+
+<main class="app-main">
+
+  <!-- Header -->
+  <div class="app-content-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <h3 class="mb-0">Update Employee</h3>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-end">
+            <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+            <li class="breadcrumb-item active">Update Employee</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="app-content">
+    <div class="container-fluid">
+      <div class="row g-4">
+        <div class="col-md-12">
+
+          <div class="card card-info card-outline mb-4">
+            <div class="card-header">
+              <div class="card-title">Employee Information</div>
+            </div>
+
+            <form class="needs-validation" novalidate>
+              <div class="card-body">
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Profile Photo</label>
+                        <input type="file" class="form-control" accept="image/*" required>
+                        <div class="invalid-feedback">Please upload profile photo.</div>
+                      </div>
+                  <!-- Personal Info -->
+                  <div class="col-md-6">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-control" required>
+                    <div class="invalid-feedback">First name is required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control" required>
+                    <div class="invalid-feedback">Last name is required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" required>
+                    <div class="invalid-feedback">Valid email required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Phone</label>
+                    <input type="tel" class="form-control" required>
+                    <div class="invalid-feedback">Phone number required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Gender</label>
+                    <select class="form-select" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                    </select>
+                    <div class="invalid-feedback">Please select gender.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" required>
+                    <div class="invalid-feedback">Date of birth required.</div>
+                  </div>
+
+                  <!-- Job Info -->
+                  <div class="col-md-6">
+                    <label class="form-label">Employee ID</label>
+                    <input type="text" class="form-control" required>
+                    <div class="invalid-feedback">Employee ID required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Department</label>
+                    <select class="form-select" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>HR</option>
+                      <option>IT</option>
+                      <option>Sales</option>
+                    </select>
+                    <div class="invalid-feedback">Select department.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Designation</label>
+                    <input type="text" class="form-control" required>
+                    <div class="invalid-feedback">Designation required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Joining Date</label>
+                    <input type="date" class="form-control" required>
+                    <div class="invalid-feedback">Joining date required.</div>
+                  </div>
+
+                  <!-- Salary -->
+                  <div class="col-md-6">
+                    <label class="form-label">Salary</label>
+                    <div class="input-group">
+                      <span class="input-group-text">₹</span>
+                      <input type="number" class="form-control" required>
+                    </div>
+                    <div class="invalid-feedback">Salary required.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Status</label>
+                    <select class="form-select" required>
+                      <option selected disabled value="">Choose...</option>
+                      <option>Active</option>
+                      <option>Inactive</option>
+                    </select>
+                    <div class="invalid-feedback">Select status.</div>
+                  </div>
+
+                  <div class="col-md-12">
+                    <label class="form-label">Address</label>
+                    <textarea class="form-control" rows="3" required></textarea>
+                    <div class="invalid-feedback">Address required.</div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="card-footer text-end">
+                <button class="btn btn-secondary" type="reset">Cancel</button>
+                <button class="btn btn-info" type="submit">Update</button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
