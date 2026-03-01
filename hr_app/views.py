@@ -27,3 +27,18 @@ def attendance_mark(request):
 
 def leave(request):
     return render(request, 'hr_app/Leave.html')
+
+def payroll(request):
+    return render(request, 'hr_app/Payroll.html')
+
+def report(request):  
+    return render(request, 'hr_app/Reports.html')
+
+def settings(request):
+    return render(request, 'hr_app/Settings.html')
+
+def view_profile(request):
+    return render(request, 'hr_app/Show_Profile.html')
+
+def edit_profile(request):
+    return render(request, 'hr_app/Edit_Profile.html')

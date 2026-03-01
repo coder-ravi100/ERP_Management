@@ -1,25 +1,30 @@
 {% extends 'hr_app/Dashboard.html' %}
 {% load static %}
 {% block meincontaint %}
-
 <main class="app-main">
-
-  <!-- Header -->
+  <!-- Page Header -->
   <div class="app-content-header">
     <div class="container-fluid">
-      <div class="row mb-2">
+      <div class="row align-items-center">
         <div class="col-sm-6">
-          <h3 class="mb-0">Leave Management</h3>
+          <h3 class="mb-0">All Employee Leave</h3>
+        </div>
+        <div class="col-sm-6 text-end">
+          <ol class="breadcrumb float-sm-end mb-0">
+            <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+            <li class="breadcrumb-item active">Leave</li>
+          </ol>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- Main Content -->
   <div class="app-content">
     <div class="container-fluid">
 
       <!-- Filter Card -->
-      <div class="card card-outline card-primary mb-3">
+      <div class="card card-outline card-primary mb-4">
         <div class="card-body">
           <form method="GET">
             <div class="row g-3 align-items-end">
@@ -65,83 +70,80 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card mb-4">
-            <div class="card-header"><h3 class="card-title">Bordered Table</h3></div>
-            <!-- /.card-header -->
-            <div class="card-body table-responsive">
-              <table class="table table-bordered table-responsive">
-                <thead>
+      <!-- Leave Table -->
+      
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card mb-4">
+              <div class="card-header"><h3 class="card-title">Attendance</h3></div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive">
+                <table class="table table-bordered table-responsive">
+                  <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Employee</th>
-                        <th>Leave Type</th>
-                        <th>From</th>
-                        <th>To</th>
-                        <th>Days</th>
-                        <th>Applied On</th>
-                        <th>Status</th>
-                        <th width="150">Action</th>
-                      </tr>
-                </thead>
-                <tbody>
-                    <tr class="align-middle">
-                        <td>1</td>
-      
-                        <td>
-                          <strong>Rahul Sharma</strong><br>
-                          <small class="text-muted"><span class="badge text-bg-primary">EMP001 | IT</span></small>
-                        </td>
-      
-                        
-                        <td>Casual Leave</td>
-                        <td>01-03-2025</td>
-                        <td>03-03-2025</td>
-                        <td>3</td>
-                        <td>25-02-2025</td>
-      
-                        <td>
-                          <span class="badge bg-warning">Pending</span>
-                        </td>
-      
-                        <td>
-                          <div class="btn-group btn-group-sm" role="group">
-                            <button type="button" class="btn btn-info">
-                              <i class="bi bi-eye"></i>
-                            </button>
-                            <button type="button" class="btn btn-success">
-                              <i class="bi bi-check-circle"></i>
-                            </button>
-                            <button type="button" class="btn btn-danger">
-                              <i class="bi bi-x-circle"></i>
-                            </button>
-                          </div>
-                        </td>
-      
-                      </tr>
-                </tbody>
-              </table>
+                      <th>#</th>
+                      <th>Employee</th>
+                      <th>Leave Type</th>
+                      <th>From</th>
+                      <th>To</th>
+                      <th>Days</th>
+                      <th>Applied On</th>
+                      <th>Status</th>
+                      <th width="150">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>
+                        <strong>Rahul Sharma</strong><br>
+                        <small>
+                          <span class="badge bg-primary">EMP001 | IT</span>
+                        </small>
+                      </td>
+                      <td>Casual Leave</td>
+                      <td>01-03-2025</td>
+                      <td>03-03-2025</td>
+                      <td>3</td>
+                      <td>25-02-2025</td>
+                      <td>
+                        <span class="badge bg-warning text-dark">Pending</span>
+                      </td>
+                      <td>
+                        <div class="btn-group btn-group-sm">
+                          <button type="button" class="btn btn-info">
+                            <i class="bi bi-eye"></i>
+                          </button>
+                          <button type="button" class="btn btn-success">
+                            <i class="bi bi-check-circle"></i>
+                          </button>
+                          <button type="button" class="btn btn-danger">
+                            <i class="bi bi-x-circle"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <ul class="pagination pagination-sm m-0 float-end">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div>
             </div>
-            <!-- /.card-body -->
-            <div class="card-footer clearfix">
-              <ul class="pagination pagination-sm m-0 float-end">
-                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-              </ul>
-            </div>
+           
           </div>
          
         </div>
        
       </div>
 
-    </div>
   </div>
-
 </main>
-
 {% endblock %}

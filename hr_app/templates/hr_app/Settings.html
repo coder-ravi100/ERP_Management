@@ -1,0 +1,66 @@
+{% extends 'hr_app/Dashboard.html' %}
+{% load static %}
+{% block meincontaint %}
+<main class="app-main">
+    <div class="container-fluid mt-4">
+
+        <h3 class="mb-4">HR Settings</h3>
+      
+        <!-- Leave Settings -->
+        <div class="card mb-4">
+          <div class="card-header bg-primary text-white">
+            Leave Settings
+          </div>
+          <div class="card-body">
+            <div class="row g-3">
+      
+              <div class="col-md-4">
+                <label class="form-label">Casual Leave Limit</label>
+                <input type="number" class="form-control">
+              </div>
+      
+              <div class="col-md-4">
+                <label class="form-label">Sick Leave Limit</label>
+                <input type="number" class="form-control">
+              </div>
+      
+              <div class="col-md-4">
+                <label class="form-label">Carry Forward Allowed</label>
+                <select class="form-select">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+      
+            </div>
+          </div>
+          <div class="card-footer text-end">
+            <button class="btn btn-success">Save Changes</button>
+          </div>
+        </div>
+      
+        <!-- Attendance Settings -->
+        <div class="card mb-4">
+          <div class="card-header bg-info text-white">
+            Attendance Settings
+          </div>
+          <div class="card-body">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label">Office Start Time</label>
+                <input type="time" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Grace Time (Minutes)</label>
+                <input type="number" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="card-footer text-end">
+            <button class="btn btn-success">Save Changes</button>
+          </div>
+        </div>
+      
+      </div>
+</main>
+{% endblock %}

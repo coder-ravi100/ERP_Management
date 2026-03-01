@@ -1,0 +1,201 @@
+{% extends 'hr_app/Dashboard.html' %}
+{% load static %}
+{% block meincontaint %}
+<main class="app-main">
+    <div class="app-content-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class="mb-0">All Employee Reports</h3>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                <li class="breadcrumb-item active">Reports</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>  
+  <!-- Main Content -->
+  <section class="content">
+    <div class="container-fluid">
+  
+      <!-- Filter Card -->
+      <div class="card card-outline card-primary mb-4">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="fas fa-filter mr-1"></i> Generate Report
+          </h3>
+        </div>
+  
+        <div class="card-body">
+          <form>
+            <div class="row">
+  
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Report Type</label>
+                  <select class="form-control">
+                    <option>Attendance Report</option>
+                    <option>Leave Report</option>
+                    <option>Payroll Report</option>
+                  </select>
+                </div>
+              </div>
+  
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label>From Date</label>
+                  <input type="date" class="form-control">
+                </div>
+              </div>
+  
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label>To Date</label>
+                  <input type="date" class="form-control">
+                </div>
+              </div>
+  
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Department</label>
+                  <select class="form-control">
+                    <option>All Departments</option>
+                    <option>HR</option>
+                    <option>IT</option>
+                    <option>Sales</option>
+                  </select>
+                </div>
+              </div>
+  
+              <div class="col-md-2 d-flex align-items-end" style="gap:8px;">
+                <button class="btn btn-primary btn-sm">
+                  <i class="bi bi-search"></i>
+                </button>
+  
+                <button class="btn btn-success btn-sm">
+                  <i class="bi bi-file-excel"></i>
+                </button>
+              </div>
+  
+            </div>
+          </form>
+        </div>
+      </div>
+      <style>
+        .border-left-primary { border-left: 4px solid #007bff; }
+        .border-left-success { border-left: 4px solid #28a745; }
+        .border-left-warning { border-left: 4px solid #ffc107; }
+        .border-left-danger  { border-left: 4px solid #dc3545; }
+        </style>
+      <!-- Summary Cards -->
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="card shadow-sm border-left-primary">
+            <div class="card-body d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="text-muted">Total Records</h5>
+                <h3 class="font-weight-bold">120</h3>
+              </div>
+              <div class="text-primary">
+                <i class="fas fa-database fa-2x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-3">
+          <div class="card shadow-sm border-left-success">
+            <div class="card-body d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="text-muted">Approved</h5>
+                <h3 class="font-weight-bold">95</h3>
+              </div>
+              <div class="text-success">
+                <i class="fas fa-check fa-2x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-3">
+          <div class="card shadow-sm border-left-warning">
+            <div class="card-body d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="text-muted">Pending</h5>
+                <h3 class="font-weight-bold">15</h3>
+              </div>
+              <div class="text-warning">
+                <i class="fas fa-clock fa-2x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-3">
+          <div class="card shadow-sm border-left-danger">
+            <div class="card-body d-flex justify-content-between align-items-center">
+              <div>
+                <h5 class="text-muted">Rejected</h5>
+                <h3 class="font-weight-bold">10</h3>
+              </div>
+              <div class="text-danger">
+                <i class="fas fa-times fa-2x"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      <br>
+      <!-- Report Table -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Report Results</h3>
+        </div>
+  
+        <div class="card-body table-responsive p-0">
+          <table class="table table-bordered table-hover text-nowrap">
+            <thead class="thead-dark">
+              <tr>
+                <th>#</th>
+                <th>Employee</th>
+                <th>Department</th>
+                <th>Report Type</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+  
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Rahul Sharma</td>
+                <td>IT</td>
+                <td>Attendance</td>
+                <td>01-03-2025</td>
+                <td><span class="badge text-bg-success">Present</span></td>
+              </tr>
+  
+              <tr>
+                <td>2</td>
+                <td>Amit Verma</td>
+                <td>HR</td>
+                <td>Leave</td>
+                <td>02-03-2025</td>
+                <td><span class="badge text-bg-warning">Pending</span></td>
+              </tr>
+  
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+</main>
+
+{% endblock %}

@@ -17,5 +17,16 @@ urlpatterns = [
     path('attendance_list/', views.list_attendance, name='list-attendance'),
     path('attendance_mark/', views.attendance_mark, name='mark-attendance'),
 
-    path('leave/', views.leave, name='leave')
+    path('leave/', views.leave, name='leave'),
+
+
+    path('payroll/', views.payroll, name='payroll'),
+
+    path('report/' , views.report, name='report'),
+
+    path('settings/', views.settings, name='settings'),
+
+    path('profile_view/', views.view_profile, name='view-profile'),
+    path('profile_edit/', views.edit_profile, name='edit-profile'),
+
 ]

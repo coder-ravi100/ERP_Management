@@ -149,13 +149,13 @@
                 </ul>
               </li>
             </ul>
-            <!--begin::Navbar Search-->
-            <li class="nav-item">
+            <!-- begin::Navbar Search-->
+            <!-- <li class="nav-item">
               <a class="nav-link" data-widget="navbar-search" href="#" role="button">
                 <i class="bi bi-search"></i>
               </a>
-            </li>
-            <!--end::Navbar Search-->
+            </li> -->
+            <!--end::Navbar Search -->
             <!--begin::Messages Dropdown Menu-->
             <li class="nav-item dropdown">
               <a class="nav-link" data-bs-toggle="dropdown" href="#">
@@ -354,24 +354,25 @@
         <!--begin::Sidebar Wrapper-->
         <div class="sidebar-wrapper">
           <nav class="mt-2">
-            <!--begin::Sidebar Menu-->
             <ul
               class="nav sidebar-menu flex-column"
               data-lte-toggle="treeview"
               role="navigation"
               aria-label="Main navigation"
               data-accordion="false"
-              id="navigation"
             >
-            <li class="nav-item mb-2">
-              <a href="{% url 'hr-dashboard' %}" class="nav-link py-2">
-                <i class="nav-icon bi bi-speedometer"></i>
-                <p>Dashboard</p>
-              </a>
-            </li>
-              
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link py-2">
+          
+              <!-- Dashboard -->
+              <li class="nav-item">
+                <a href="{% url 'hr-dashboard' %}" class="nav-link">
+                  <i class="nav-icon bi bi-speedometer"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
+          
+              <!-- Employees -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
                   <i class="nav-icon bi bi-people-fill"></i>
                   <p>
                     Employees
@@ -391,12 +392,13 @@
                       <p>Create Employee</p>
                     </a>
                   </li>
-                  
                 </ul>
               </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link py-2">
-                  <i class="nav-icon bi bi-clipboard-fill"></i>
+          
+              <!-- Department -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-building"></i>
                   <p>
                     Department
                     <span class="nav-badge badge text-bg-success me-3">6</span>
@@ -405,23 +407,24 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="./layout/unfixed-sidebar.html" class="nav-link">
+                    <a href="{% url 'department' %}" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
                       <p>Department List</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="./layout/fixed-sidebar.html" class="nav-link">
+                    <a href="{% url 'department-add' %}" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
                       <p>Create Department</p>
                     </a>
                   </li>
                 </ul>
               </li>
-
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link py-2">
-                  <i class="nav-icon bi bi-tree-fill"></i>
+          
+              <!-- Attendance -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-calendar-check"></i>
                   <p>
                     Attendance
                     <i class="nav-arrow bi bi-chevron-right"></i>
@@ -429,21 +432,23 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="./UI/general.html" class="nav-link">
+                    <a href="{% url 'list-attendance' %}" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
                       <p>Attendance List</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="./UI/icons.html" class="nav-link">
+                    <a href="{% url 'mark-attendance' %}" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
-                      <p>Attendance Mark</p>
+                      <p>Mark Attendance</p>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link py-2">
+          
+              <!-- Leave -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
                   <i class="nav-icon bi bi-pencil-square"></i>
                   <p>
                     Leave
@@ -452,82 +457,59 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="./forms/general.html" class="nav-link">
+                    <a href="{% url 'leave' %}" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
                       <p>Leave List</p>
                     </a>
                   </li>
                 </ul>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="./forms/general.html" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Leave Requests</p>
-                    </a>
-                  </li>
-                </ul>
               </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link py-2">
-                  <i class="nav-icon bi bi-table"></i>
-                  <p>
-                    Payroll
-                    <i class="nav-arrow bi bi-chevron-right"></i>
-                  </p>
+          
+              <!-- Payroll -->
+              <li class="nav-item">
+                <a href="{% url 'payroll' %}" class="nav-link">
+                  <i class="nav-icon bi bi-cash-stack"></i>
+                  <p>Payroll</p>
                 </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="./tables/simple.html" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Payroll List</p>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="./tables/simple.html" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Payroll Generate</p>
-                    </a>
-                  </li>
-                </ul>
               </li>
+          
+              <!-- Reports -->
+              <li class="nav-item">
+                <a href="{% url 'report' %}" class="nav-link">
+                  <i class="nav-icon bi bi-bar-chart"></i>
+                  <p>Reports</p>
+                </a>
+              </li>
+          
+              <!-- Settings -->
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon bi bi-gear"></i>
                   <p>
-                    Setting
+                    Settings
                     <i class="nav-arrow bi bi-chevron-right"></i>
                   </p>
                 </a>
-              
                 <ul class="nav nav-treeview">
-              
                   <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="nav-icon bi bi-person"></i>
+                    <a href="" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
                       <p>Profile</p>
-                    </a>
-                  </li>
-              
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="nav-icon bi bi-file-earmark-text"></i>
-                      <p>Reports</p>
                     </a>
                   </li>
                 </ul>
               </li>
+          
+              <!-- Logout -->
               <li class="nav-header">System Exit</li>
-              <li class="nav-item mb-2">
-                <a href="" class="nav-link py-2">
+              <li class="nav-item">
+                <a href="" class="nav-link">
                   <i class="nav-icon bi bi-power"></i>
                   <p><span class="badge text-bg-danger">Logout</span></p>
                 </a>
               </li>
-            </li>
+          
             </ul>
-            <!--end::Sidebar Menu-->
           </nav>
         </div>
         <!--end::Sidebar Wrapper-->

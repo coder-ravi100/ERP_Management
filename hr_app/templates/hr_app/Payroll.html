@@ -1,0 +1,179 @@
+{% extends 'hr_app/Dashboard.html' %}
+{% load static %}
+{% block meincontaint %}
+
+<main class="app-main">
+
+    <div class="app-content-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class="mb-0">All Employee Payroll</h3>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                <li class="breadcrumb-item active">Payroll</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <div class="app-content">
+    <div class="container-fluid">
+
+      <!-- Filter Card -->
+      <div class="card card-outline card-primary mb-4">
+        <div class="card-header">
+          <h3 class="card-title">
+            <i class="fas fa-filter mr-1"></i> Payroll Filters
+          </h3>
+        </div>
+      
+        <div class="card-body">
+          <form method="GET">
+            <div class="row">
+      
+              <!-- Month -->
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label>Month</label>
+                  <select name="month" class="form-control form-control-sm">
+                    <option>Select</option>
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                  </select>
+                </div>
+              </div>
+      
+              <!-- Year -->
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label>Year</label>
+                  <select name="year" class="form-control form-control-sm">
+                    <option>Select</option>
+                    <option>2025</option>
+                    <option>2024</option>
+                  </select>
+                </div>
+              </div>
+      
+              <!-- Department -->
+              <div class="col-md-3">
+                <div class="form-group">
+                  <label>Department</label>
+                  <select name="department" class="form-control form-control-sm">
+                    <option>All Departments</option>
+                    <option>HR</option>
+                    <option>IT</option>
+                    <option>Sales</option>
+                  </select>
+                </div>
+              </div>
+      
+              <!-- Status -->
+              <div class="col-md-2">
+                <div class="form-group">
+                  <label>Status</label>
+                  <select name="status" class="form-control form-control-sm">
+                    <option>All</option>
+                    <option>Paid</option>
+                    <option>Unpaid</option>
+                  </select>
+                </div>
+              </div>
+      
+              <!-- Buttons -->
+              <div class="col-md-3 d-flex align-items-end" style="gap:10px;">
+                <button type="submit" class="btn btn-primary btn-sm">
+                  <i class="bi bi-search"></i>
+                </button>
+              
+                <button type="button" class="btn btn-success btn-sm">
+                  <i class="bi bi-folder"></i>
+                </button>
+              </div>
+      
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mb-4">
+            <div class="card-header"><h3 class="card-title">Bordered Table</h3></div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive">
+              <table class="table table-bordered table-responsive">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Employee</th>
+                        <th>Basic</th>
+                        <th>Allowance</th>
+                        <th>Gross</th>
+                        <th>Deduction</th>
+                        <th>Net Salary</th>
+                        <th>Status</th>
+                        <th width="150">Action</th>
+                      </tr>
+                </thead>
+                <tbody>
+                    <tr class="align-middle">
+                        <td>1</td>
+      
+                        <td>
+                          <strong>Rahul Sharma</strong><br>
+                          <small class="text-muted"><span class="badge text-bg-primary">EMP001 | IT</span></small>
+                        </td>
+                        <td>₹30,000</td>
+                        <td>₹5,000</td>
+                        <td>₹35,000</td>
+                        <td>₹3,000</td>
+                        <td><strong>₹32,000</strong></td>
+                        <td>
+                            <span class="badge text-bg-danger">Unpaid</span>
+                        </td>
+                        <td>
+                          <div class="btn-group btn-group-sm" role="group">
+                            <button type="button" class="btn btn-info">
+                              <i class="bi bi-eye"></i>
+                            </button>
+                            <button type="button" class="btn btn-success">
+                              <i class="bi bi-check-circle"></i>
+                            </button>
+                            <button type="button" class="btn btn-danger">
+                              <i class="bi bi-x-circle"></i>
+                            </button>
+                          </div>
+                        </td>
+      
+                      </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer clearfix">
+              <ul class="pagination pagination-sm m-0 float-end">
+                <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+         
+        </div>
+       
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

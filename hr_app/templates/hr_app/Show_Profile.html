@@ -1,0 +1,110 @@
+{% extends 'hr_app/Dashboard.html' %}
+{% load static %}
+{% block meincontaint %}
+<main class="app-main">
+    <div class="app-content">
+        <div class="container-fluid">
+            <div class="app-content-header">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <h3 class="mb-0">HR Profile</h3>
+                    </div>
+                    <div class="col-sm-6">
+                      <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item active">HR</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            <div class="row">
+    
+                <!-- Left Profile Card -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                      <div class="card-body text-center">
+          
+                        <img src="{% static 'hr_app/assets/img/user1-128x128.jpg' %}"
+                             class="rounded-circle mb-3"
+                             width="120" height="120">
+          
+                        <h4 class="mb-0">Rahul Sharma</h4>
+                        <p class="text-muted">hr@example.com</p>
+          
+                        <hr>
+          
+                        <a href="edit-profile.html" class="btn btn-primary btn-block">
+                            <b>Edit Profile</b>
+                          </a>
+          
+                      </div>
+                    </div>
+                  </div>
+            
+                <!-- Right Details Section -->
+                <div class="col-md-8">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="mb-0">Personal Information</h5>
+                    </div>
+                    <div class="card-body">
+            
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <strong>Full Name</strong>
+                          <p class="text-muted "><span class="badge text-bg-success">Rahul Sharma</span></p>
+                        </div>
+                        <div class="col-md-6">
+                          <strong>Email</strong>
+                          <p class="text-muted"><span class="badge text-bg-success">rahul@gmail.com</span></p>
+                        </div>
+                      </div>
+            
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <strong>Phone</strong>
+                          <p class="text-muted"><span class="badge text-bg-success">9876543210</span></p>
+                        </div>
+                        <div class="col-md-6">
+                          <strong>Website</strong>
+                          <p class="text-muted"><span class="badge text-bg-success">www.company.com</span></p>
+                        </div>
+                      </div>
+            
+                      <hr>
+            
+                      <h6 class="text-primary">Address</h6>
+            
+                      <div class="row mt-3">
+                        <div class="col-md-6">
+                          <strong>Street</strong>
+                          <p class="text-muted"><span class="badge text-bg-success">Sector 22</span></p>
+                        </div>
+                        <div class="col-md-6">
+                          <strong>City</strong>
+                          <p class="text-muted"><span class="badge text-bg-success">Delhi</span></p>
+                        </div>
+                      </div>
+            
+                      <div class="row">
+                        <div class="col-md-6">
+                          <strong>State</strong>
+                          <p class="text-muted"><span class="badge text-bg-success">Delhi</span></p>
+                        </div>
+                        <div class="col-md-6">
+                          <strong>Zip Code</strong>
+                          <p class="text-muted"><span class="badge text-bg-success">110001</span></p>
+                        </div>
+                      </div>
+            
+                    </div>
+                  </div>
+                </div>
+            
+              </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

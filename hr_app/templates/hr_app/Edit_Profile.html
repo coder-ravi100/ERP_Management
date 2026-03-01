@@ -1,0 +1,131 @@
+{% extends 'hr_app/Dashboard.html' %}
+{% load static %}
+{% block meincontaint %}
+<main class="app-main">
+
+  <div class="app-content">
+    <div class="container-fluid">
+      <div class="app-content-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class="mb-0">Edit Profile For HR</h3>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                <li class="breadcrumb-item active">HR Edit Profile</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div class="row mt-4">
+
+        <!-- LEFT PROFILE CARD -->
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+
+              <img src="{% static 'hr_app/assets/img/user1-128x128.jpg' %}"
+                   class="rounded-circle mb-3"
+                   width="120" height="120">
+
+              <h4 class="mb-0">Rahul Sharma</h4>
+              <p class="text-muted">hr@example.com</p>
+
+              <hr>
+
+              <h5 class="text-primary">Image Change</h5>
+              <div class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                <input type="file" class="form-control" id="inputGroupFile01">
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT EDIT FORM -->
+        <div class="col-md-8">
+          <div class="card shadow-sm">
+            <div class="card-body">
+
+              <h5 class="text-primary mb-4">Personal Details</h5>
+
+              <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <div class="row g-4">
+
+                  <div class="col-md-6">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-control" placeholder="Enter full name">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="Enter email ID">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Phone</label>
+                    <input type="text" class="form-control" placeholder="Enter phone number">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Website URL</label>
+                    <input type="text" class="form-control" placeholder="Website URL">
+                  </div>
+
+                </div>
+
+                <hr class="my-4">
+
+                <h5 class="text-primary mb-4">Address</h5>
+
+                <div class="row g-4">
+
+                  <div class="col-md-6">
+                    <label class="form-label">Street</label>
+                    <input type="text" class="form-control" placeholder="Enter Street">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">City</label>
+                    <input type="text" class="form-control" placeholder="Enter City">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">State</label>
+                    <input type="text" class="form-control" placeholder="Enter State">
+                  </div>
+
+                  <div class="col-md-6">
+                    <label class="form-label">Zip Code</label>
+                    <input type="text" class="form-control" placeholder="Zip Code">
+                  </div>
+
+                </div>
+
+                <div class="text-end mt-4">
+                  <button type="reset" class="btn btn-secondary me-2">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary">
+                    Update
+                  </button>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+{% endblock %}
