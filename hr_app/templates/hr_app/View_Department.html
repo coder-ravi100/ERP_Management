@@ -1,0 +1,149 @@
+{% extends 'hr_app/Dashboard.html' %}
+{% load static %}
+{% block meincontaint %}
+<main class="app-main">
+    <!--begin::App Content Header-->
+    <div class="app-content-header">
+      <!--begin::Container-->
+      <div class="container-fluid">
+        <!--begin::Row-->
+        <div class="row">
+          <div class="col-sm-6"><h3 class="mb-0">Department Info</h3></div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-end">
+              <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">View Department</li>
+            </ol>
+          </div>
+        </div>
+        <!--end::Row-->
+      </div>
+      <!--end::Container-->
+    </div>
+    <!--end::App Content Header-->
+    <!--begin::App Content-->
+    <div class="app-content">
+      <!--begin::Container-->
+      <div class="container-fluid">
+        <div class="row">
+
+          <!-- LEFT MINI INFO PANEL -->
+          <div class="col-md-3">
+        
+            <div class="p-4 border-end h-100">
+        
+              <h5 class="fw-bold mb-3">IT Department</h5>
+        
+              <div class="mb-3">
+                <small class="text-muted">Department Code</small>
+                <div class="fw-semibold">IT001</div>
+              </div>
+        
+              <div class="mb-3">
+                <small class="text-muted">Head</small>
+                <div class="fw-semibold">Rahul Sharma</div>
+              </div>
+        
+              <div class="mb-3">
+                <small class="text-muted">Status</small><br>
+                <span class="badge bg-success">Active</span>
+              </div>
+        
+              <div class="mb-4">
+                <small class="text-muted">Created</small>
+                <div class="fw-semibold">12 Jan 2023</div>
+              </div>
+        
+              <div class="d-flex justify-content-center gap-2 mt-4">
+    
+                <button class="btn btn-sm btn-outline-success">
+                    <i class="bi bi-eye"></i>
+                </button>
+            
+                <button class="btn btn-sm btn-outline-danger">
+                    <i class="bi bi-pencil"></i>
+                </button>
+            
+            </div>
+        
+            </div>
+        
+          </div>
+        
+        
+          <!-- RIGHT MAIN CONTENT -->
+          <div class="col-md-9">
+        
+            <div class="p-4">
+        
+              <!-- Stats Row -->
+              <div class="row mb-4">
+        
+                <div class="col-md-3">
+                  <h4 class="fw-bold mb-0">12</h4>
+                  <small class="text-muted">Total Employees</small>
+                </div>
+        
+                <div class="col-md-3">
+                  <h4 class="fw-bold mb-0">10</h4>
+                  <small class="text-muted">Active</small>
+                </div>
+        
+                <div class="col-md-3">
+                  <h4 class="fw-bold mb-0">5</h4>
+                  <small class="text-muted">Projects</small>
+                </div>
+        
+                <div class="col-md-3">
+                  <h4 class="fw-bold mb-0">2</h4>
+                  <small class="text-muted">Open Roles</small>
+                </div>
+        
+              </div>
+        
+              <hr>
+        
+              <!-- Description -->
+              <div class="mb-4">
+                <h6 class="fw-bold mb-2">About Department</h6>
+                <p class="text-muted mb-0">
+                  The IT Department manages backend services, cloud infrastructure,
+                  database systems and API integrations for the organization.
+                </p>
+              </div>
+        
+              <hr>
+        
+              <!-- Employee List -->
+              <h6 class="fw-bold mb-3">Team Members</h6>
+        
+              <div class="list-group list-group-flush">
+        
+                <div class="list-group-item d-flex justify-content-between align-items-center">
+        
+                  <div class="d-flex align-items-center">
+                    <img src="{% static 'hr_app/assets/img/user1-128x128.jpg' %}"
+                         class="rounded-circle me-3"
+                         width="40" height="40">
+        
+                    <div>
+                      <div class="fw-semibold">Amit Verma</div>
+                      <small class="text-muted">Backend Developer</small>
+                    </div>
+                  </div>
+        
+                  <span class="badge bg-success">Active</span>
+        
+                </div>
+        
+              </div>
+        
+            </div>
+        
+          </div>
+        
+        </div>
+      </div>
+    </div>
+</main>
+{% endblock %}

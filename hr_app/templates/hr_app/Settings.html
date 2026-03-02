@@ -3,12 +3,25 @@
 {% block meincontaint %}
 <main class="app-main">
     <div class="container-fluid mt-4">
-
-        <h3 class="mb-4">HR Settings</h3>
+      <div class="app-content-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class="mb-0">Setting</h3>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-end">
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                <li class="breadcrumb-item active">HR Setting</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>  
       
         <!-- Leave Settings -->
         <div class="card mb-4">
-          <div class="card-header bg-primary text-white">
+          <div class="card-header text-white">
             Leave Settings
           </div>
           <div class="card-body">
@@ -41,7 +54,7 @@
       
         <!-- Attendance Settings -->
         <div class="card mb-4">
-          <div class="card-header bg-info text-white">
+          <div class="card-header text-white">
             Attendance Settings
           </div>
           <div class="card-body">

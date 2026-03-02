@@ -13,11 +13,17 @@ def employee_add(request):
 def update_employee(request):
     return render(request, 'hr_app/Update_Employee.html')
 
+def single_employee(request):   
+    return render(request, 'hr_app/View_Employee.html')
+
 def department_add(request):
     return render(request, 'hr_app/Add_Department.html')
 
 def department(request):
     return render(request, 'hr_app/All_Department.html')
+
+def view_department(request):
+    return render(request, 'hr_app/View_Department.html')
 
 def list_attendance(request):
     return render(request, 'hr_app/Attendance.html')
