@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'teams',
     'leave',
     'tasks',
-    'core',
+    # 'core',
 
     'django.contrib.admin',
     'django.contrib.auth',
